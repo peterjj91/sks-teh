@@ -1,0 +1,53 @@
+// Этот блок ответственнен за типографику проекта.
+// Не пишите тут какую-либо стороннюю стилизацию.
+
+body {
+  font-family: $font-family;
+}
+
+h1, .head-h1 {
+  font-size: 34px;
+  font-weight: bold;
+
+  @media(min-width: $screen-md){
+
+  }
+  @media(min-width: $screen-lg){
+
+  }
+}
+
+h2, .head-h2 {
+  font-size: 29px;
+  font-weight: bold;
+
+  @media(min-width: $screen-md){
+
+  }
+  @media(min-width: $screen-lg){
+
+  }
+}
+
+h3, .head-h3 {
+  font-size: 24px;
+  font-weight: bold;
+
+  @media(min-width: $screen-md){
+    
+  }
+  @media(min-width: $screen-lg){
+    
+  }
+}
+
+p {
+  
+
+  @media(min-width: $screen-md){
+
+  }
+  @media(min-width: $screen-lg){
+
+  }
+}

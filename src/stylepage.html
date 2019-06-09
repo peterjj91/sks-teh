@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html class="no-js page" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Стили</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+<body>
+<div class="page">
+  <div class="container">
+    <h1>Заголовок</h1>
+    <div class="head-h2">Заголовок</div>
+    <div class="head-h3">Заголовок</div>
+
+    <div class="justify-content-end text-right">
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link" href="#">О компании</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Виды деятельности</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Наши объекты</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Контакты</a>
+        </li>
+      </ul>
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">О компании</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Виды деятельности</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Наши объекты</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Контакты</a>
+        </li>
+      </ul>
+
+      <a href="#" class="nav-adress">sks-teh@bk.ru</a>
+    </div>
+
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-primary">Подробнее</button>
+      <button type="button" class="btn btn-danger">Подробнее</button>
+    </div>
+    <br><br>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-outline-primary">Подробнее</button>
+      <button type="button" class="btn btn-outline-danger">Подробнее</button>
+    </div>
+
+    <div class="d-flex">
+      <ul class="list--bullet">
+        <li>Заголовок списка</li>
+        <li>Заголовок списка</li>
+        <li>Заголовок списка</li>
+        <li>Заголовок списка</li>
+      </ul>
+      <ol class="list--counter">
+        <li>Заголовок списка</li>
+        <li>Заголовок списка</li>
+        <li>Заголовок списка</li>
+        <li>Заголовок списка</li>
+      </ol>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+        <div class="card">
+          <div class="card-img" style="background-image: url(../img/card-img.jpg);"></div>
+          <div class="card-body">
+            <h5 class="card-title">Гидроизоляция подземных сооружений</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card card--background text-white">
+          <div class="card-img" style="background-image: url(../img/card-img.jpg);"></div>
+          <div class="card-body">
+            <h5 class="card-title">Гидроизоляция подземных сооружений</h5>
+            <a href="#" class="card-link">Подробнее</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+@@include('_include/page_bottom.html')
+</body>
+</html>

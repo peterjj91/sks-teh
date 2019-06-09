@@ -1,0 +1,90 @@
+// В этом файле должны быть стили только для БЭМ-блока btn, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, $media-условий...
+// Не пишите здесь другие селекторы.
+
+$gray-lighter:                hsl(0, 0%, 80%) !default;
+$gray-lightest:               hsl(0, 0%, 90%) !default;
+$text-color:                  hsl(0, 0%, 10%) !default;
+$line-height:                 1.375em;
+
+$field-padding-vertical:      0.3em !default;
+$field-padding-horizontal:    0.7em !default;
+
+$border-radius:               3px !default;
+
+.btn {
+  border-radius: 0px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  @media(min-width: $screen-lg){
+    font-size: 14px;
+  }
+
+  &-primary {
+
+    &:hover, &:focus {
+      
+    }
+
+    &.active {
+      
+    }
+
+    &:not(:disabled):not(.disabled):active {
+      
+    }
+  }
+
+  &-danger {
+
+    &:focus, &.focus {
+
+    }
+
+    &.active {
+
+    }
+
+    &:not(:disabled):not(.disabled) {
+
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+
+
+      &:focus {
+
+      }
+    }
+  }
+
+  &-outline-primary {
+
+
+    &:focus, &.focus {
+
+    }
+
+    @include hover-focus {
+
+    }
+
+    &.active {
+
+    }
+
+    &:not(:disabled):not(.disabled) {
+
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+
+      &:focus {
+
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+// В этом файле должны быть стили для БЭМ-блока table, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.table {
+
+  $block-name:                &; // #{$block-name}__element {}
+  border: 1px solid $color-main--accent;
+  font-size: 13px;
+
+  th, td {
+    border-color: $color-main--accent;
+
+    // &:first-child {
+    //   border: 1px solid $color-main--accent;
+    // }
+
+    // &:last-child {
+    //   border-right: 1px solid $color-main--accent;
+    // }
+  }
+
+  .thead-light {
+    th {
+      background-color: $color-main--accent;
+      border-color: $color-main--accent;
+    }
+  }
+
+  thead {
+    font-size: 14px;
+  }
+}
