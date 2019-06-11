@@ -3,7 +3,7 @@
     "default": [],
     "page": [],
     "typo": [],
-    "page-header": [],
+    "navbar": [],
     "page-footer": [],
     "logo": [],
     "breadcrumb": [],
@@ -12,14 +12,23 @@
     "burger": [],
     "menu": [],
     "accordion": [],
-    "nav": [],
     "card": [],
     "table": [],
-    "list": []
+    "list": [],
+    "header": [],
+    "main-info": [],
+    "catalog-promo": [],
+    "block-promo": [],
+    "about-promo": [],
+    "slider": [],
+    "modal": [],
+    "form": [],
+    "contact": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
-    "./node_modules/bootstrap/scss/bootstrap.scss"
+    "./node_modules/bootstrap/scss/bootstrap.scss",
+    "./node_modules/slick-carousel/slick/slick.scss"
   ],
   "addCssAfter": [],
   "singleCompiled": [],

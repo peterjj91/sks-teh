@@ -13,27 +13,27 @@ $breadcrumb-divider: quote("&#8594;");
   $block-name: &;
   background-color: transparent;
   padding: 0;
-  font-size: 14px;
-  margin-bottom: 13px;
+  font-size: 11px;
+  margin-bottom: 1px;
 
   @media(min-width: $screen-lg){
-    margin-bottom: 24px;
+    // margin-bottom: 24px;
   }
 
   &-item {
     & + & {
-      padding-left: 3px;
+      padding-left: 12px;
 
       &:before {
-        content: '→';
-        font-size: 11px;
-        padding-right: 3px;
-        color: #6c757d;
+        content: '/';
+        // font-size: 11px;
+        padding-right: 11px;
+        color: $gray-dark;
       }
     }
 
     a {
-      color: #666666;
+      color: $gray-dark;
 
       &:hover, &:focus {
         text-decoration: none;
@@ -41,7 +41,7 @@ $breadcrumb-divider: quote("&#8594;");
     }
 
     &.active {
-      color: #666666;
+      color: black;
     }
   }
 }

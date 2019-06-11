@@ -1,0 +1,25 @@
+// В этом файле должны быть стили для БЭМ-блока form, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.form {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  &-control {
+    border-radius: 0px;
+    border-color: #e8e8e8;
+    color: black;
+    font-size: 14px;
+    padding: 5px 13px 3px 13px;
+    resize: none;
+  }
+
+  &-check-label {
+    color: $gray-light;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}

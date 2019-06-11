@@ -13,12 +13,15 @@ $field-padding-horizontal:    0.7em !default;
 $border-radius:               3px !default;
 
 .btn {
+  font-size: 13px;
+  padding: 10px 21px 8px 21px;
+  letter-spacing: 0.6px;
   border-radius: 0px;
   font-weight: bold;
   text-transform: uppercase;
 
   @media(min-width: $screen-lg){
-    font-size: 14px;
+    
   }
 
   &-primary {

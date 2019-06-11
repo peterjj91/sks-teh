@@ -1,0 +1,33 @@
+// В этом файле должны быть стили для БЭМ-блока about-promo, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.about-promo {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  &__img {
+    max-width: 100%;
+
+    @include media-breakpoint-up(xl) {
+      margin: -5px 9px 0px -8px;
+    }
+  }
+
+  &__content {
+    padding-top: 27px;
+
+    &__title {
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 25px;
+      margin-bottom: 17px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 21px;
+    }
+  }
+}

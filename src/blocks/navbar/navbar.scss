@@ -1,0 +1,261 @@
+// В этом файле должны быть стили для БЭМ-блока navbar, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.navbar {
+
+  $block-name: &; // #{$block-name}__element {}
+  height: 117px;
+  padding-left: 0;
+  padding-right: 0;
+
+  @include media-breakpoint-down(xl) {
+    align-items: baseline;
+    padding-top: 35px;
+  }
+
+  &-collapse {
+    @include media-breakpoint-down(md) {
+      background-color: $color-primary;
+      margin-top: 20px;
+    }
+  }
+
+  &-nav {
+    margin-top: 2px;
+
+    @include media-breakpoint-down(md) {
+      padding: 0px 20px;
+      margin-top: 10px;
+    }
+
+    li {
+      margin-right: 13px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .nav {
+      &-link {
+        font-weight: bold;
+        text-transform: uppercase;
+        white-space: nowrap;
+    
+        @media(min-width: $screen-lg){
+          font-size: 13px;
+          letter-spacing: 0.7px;
+        }
+    
+        &:hover, &:focus {
+          color: #24668c;
+        }
+      }
+    }
+  }
+
+  &-collapse {
+    z-index: 2;
+  }
+
+  &-light {
+    .navbar-toggler {
+      outline: none !important;
+      background-color: white;
+    }
+
+    .navbar-nav {
+      .nav-link {
+        color: white;
+
+        &:hover, &:focus {
+          @media(max-width: 991px) {
+            color: white !important;
+          }
+        }
+
+        @include media-breakpoint-up(lg) {
+          color: black;
+        }
+      }
+
+      .active {
+        & > .nav-link {
+          color: white;
+
+          @include media-breakpoint-up(lg) {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+
+  &-brand {
+    font-size: 22px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    padding: 0px 0px;
+    margin: 0px 0px 3px 0px;
+    line-height: 20px;
+
+    span {
+      color: $color-primary;
+    }
+  }
+
+  &-logo {
+    font-size: 12px;
+    line-height: normal;
+    margin-top: 6px;
+    white-space: nowrap;
+
+    @media(min-width: $screen-lg) {
+      margin-right: 81px;
+    }
+    @media(min-width: $screen-md) {
+      margin-right: 20px;
+    }
+
+    p {
+      margin: 0;
+      letter-spacing: 0.3px;
+    }
+  }
+
+  &-adress {
+    font-size: 13px;
+
+    &:hover, &:focus {
+      color: $color-danger;
+      text-decoration: underline;
+    }
+  }
+
+  &-side {
+    @extend .d-flex;
+    @extend .align-items-center;
+    line-height: normal;
+
+    @include media-breakpoint-down(md) {
+      padding: 10px 20px 20px 20px;
+      display: block !important;
+    }
+
+     & > * {
+       margin-right: 45px;
+
+       &:last-child {
+         margin-right: 0;
+       }
+     }
+  }
+
+  &-contact {
+    letter-spacing: 0.7px;
+    white-space: nowrap;
+    display: none;
+
+    @include media-breakpoint-up(xl) {
+      display: block;
+    }
+    @include media-breakpoint-down(md) {
+      display: block !important;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .head-h4 {
+      a {
+        color: black;
+
+        @include media-breakpoint-down(md) {
+          color: white;
+        }
+        
+        &:hover, &:focus {
+          color: black;
+          text-decoration: none;
+
+          @include media-breakpoint-down(md) {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  &-location {
+    width: 203px;
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 13px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &--footer {
+    height: auto;
+    align-items: baseline;
+    @extend .align-items-start;
+    color: white;
+    padding: 31px 15px 34px 15px;
+
+    @include media-breakpoint-up(xl) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    #{$block-name} {
+      &-logo {
+        margin-top: 12px;
+        margin-right: 43px;
+      }
+      &-brand {
+        color: white;
+
+        span {
+          color: $color-main--light;
+        }
+      }
+      &-contact {
+        .head-h4 {
+          a {
+            color: white;
+          }
+        }
+      }
+      &-nav {
+        margin-top: 0;
+      }
+      &-adress {
+        color: white;
+      }
+      &-side {
+        padding-top: 7px;
+        display: none !important;
+
+        @include media-breakpoint-up(xl) {
+          display: block;
+        }
+        @include media-breakpoint-down(md) {
+          display: block !important;
+        }
+      }
+    }
+
+    .nav-link {
+      color: white;
+      &:hover, &:focus {
+        color: white;
+      }
+    }
+  }
+}

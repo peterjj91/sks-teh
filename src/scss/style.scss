@@ -6,10 +6,11 @@
 
 @import './src/scss/variables.scss';
 @import './node_modules/bootstrap/scss/bootstrap.scss';
+@import './node_modules/slick-carousel/slick/slick.scss';
 @import './src/blocks/default/default.scss';
 @import './src/blocks/page/page.scss';
 @import './src/blocks/typo/typo.scss';
-@import './src/blocks/page-header/page-header.scss';
+@import './src/blocks/navbar/navbar.scss';
 @import './src/blocks/page-footer/page-footer.scss';
 @import './src/blocks/logo/logo.scss';
 @import './src/blocks/breadcrumb/breadcrumb.scss';
@@ -18,7 +19,15 @@
 @import './src/blocks/burger/burger.scss';
 @import './src/blocks/menu/menu.scss';
 @import './src/blocks/accordion/accordion.scss';
-@import './src/blocks/nav/nav.scss';
 @import './src/blocks/card/card.scss';
 @import './src/blocks/table/table.scss';
 @import './src/blocks/list/list.scss';
+@import './src/blocks/header/header.scss';
+@import './src/blocks/main-info/main-info.scss';
+@import './src/blocks/catalog-promo/catalog-promo.scss';
+@import './src/blocks/block-promo/block-promo.scss';
+@import './src/blocks/about-promo/about-promo.scss';
+@import './src/blocks/slider/slider.scss';
+@import './src/blocks/modal/modal.scss';
+@import './src/blocks/form/form.scss';
+@import './src/blocks/contact/contact.scss';

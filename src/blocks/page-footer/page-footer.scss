@@ -4,6 +4,8 @@
 
 .page-footer {
   $block-name: &;
+  background-image: url(../img/footer-background.png);
+  color: white;
 
   @media(min-width: $screen-lg) {
 
@@ -22,7 +24,7 @@
 
   &__content {
     flex: 1;
-    padding: 0px 0px 0px 0px;
+    padding: 0;
     position: relative;
 
     @media(min-width: $screen-xl){
@@ -30,6 +32,39 @@
     }
     @media(min-width: $screen-lg){
 
+    }
+  }
+
+  &__bottom {
+    background-color: white;
+    color: black;
+    padding: 16px 0px 16px 0px;
+    font-size: 11px;
+    
+    @include media-breakpoint-up(xl) {
+      padding-bottom: 0;
+    }
+
+    .d-flex {
+      @include media-breakpoint-down(xl) {
+        display: block !important;
+      }
+    }
+
+    p {
+      &:last-child {
+        @include media-breakpoint-down(xl) {
+          margin-bottom: 0;
+        }
+      }
+    }
+     
+    a {
+      color: $color-primary;
+
+      &:hover, &:focus {
+        color: $color-primary;
+      }
     }
   }
 }

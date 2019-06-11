@@ -1,0 +1,62 @@
+// В этом файле должны быть стили для БЭМ-блока catalog-promo, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.catalog-promo {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  &__nav {
+    margin-bottom: 27px;
+
+    @include media-breakpoint-up(xl) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__more {
+    font-size: 14px;
+    text-decoration: underline;
+  }
+
+  &--service {
+    #{$block-name} {
+      &__nav {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &--inner {
+    #{$block-name} {
+      &__nav {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.inner-block {
+  margin-bottom: 70px;
+
+  &__title {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  img {
+    @include media-breakpoint-down(md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 22px;
+  }
+}
