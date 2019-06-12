@@ -6,6 +6,8 @@
  * Не пишите сюда ничего вручную, все такие правки будут потеряны.
  * Читайте ./README.md для понимания.
  */
+.container {
+  max-width: 1200px !important; }
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -4645,6 +4647,10 @@ a:hover {
 .navbar-contact .head-h4 a:hover, .navbar-contact .head-h4 a:focus {
         color: black;
         text-decoration: none; }
+.navbar-contact--mobile {
+      display: none !important; }
+.navbar-contact--mobile .head-h4 a {
+        color: black !important; }
 .navbar-location {
     width: 203px;
     display: -webkit-box;
@@ -4846,7 +4852,7 @@ a:hover {
 .card--inner {
     margin-bottom: 48px; }
 .card--inner .card-img {
-      padding-top: 75px; }
+      padding-top: 75%; }
 .card--inner .card-body {
       position: absolute;
       bottom: 0px;
@@ -4917,9 +4923,9 @@ a:hover {
           align-items: center;
   background-image: url(../img/header-background.jpg);
   background-size: cover;
-  background-position: top center; }
+  background-position: top right; }
 .header--index {
-    height: 100vh;
+    background-position: left bottom;
     margin-bottom: 52px; }
 .main-info {
   display: -webkit-box;
@@ -4958,9 +4964,9 @@ a:hover {
 .block-promo {
   margin-bottom: 50px; }
 .block-promo--about {
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom left 10px;
+    background-position: bottom;
     margin-bottom: 50px; }
 .about-promo__img {
   max-width: 100%; }
@@ -5878,7 +5884,9 @@ a:hover {
   .text-sm-right {
     text-align: right !important; }
   .text-sm-center {
-    text-align: center !important; } }
+    text-align: center !important; }
+        .navbar-contact--mobile {
+          display: block !important; } }
 @media (min-width: 768px) {
     .container {
       max-width: 720px; }
@@ -6505,6 +6513,8 @@ a:hover {
         .card--inner .card-img {
           height: 368px;
           padding-top: 0; }
+      .header--index {
+        background-position: bottom center; }
     .modal-dialog {
       max-width: 372px; }
     .contact__form {
@@ -7137,6 +7147,10 @@ a:hover {
         color: black; }
       .navbar-light .navbar-nav .active > .nav-link {
         color: #24668c; }
+      .navbar-contact {
+        display: block; }
+        .navbar-contact--mobile {
+          display: none !important; }
       .page-footer__bottom {
         padding-bottom: 0; }
       .card-img {
@@ -7151,7 +7165,7 @@ a:hover {
           font-size: 13px;
           letter-spacing: 0.7px; }
       .navbar-logo {
-        margin-right: 88px; }
+        margin-right: 30px; }
       .page-footer__inner {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -7169,6 +7183,8 @@ a:hover {
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: start; }
+      .header--index {
+        background-position: right bottom; }
       .stylepage__nav .nav {
         -webkit-box-pack: end;
             -ms-flex-pack: end;
@@ -7796,8 +7812,8 @@ a:hover {
     text-align: right !important; }
   .text-xl-center {
     text-align: center !important; }
-      .navbar-contact {
-        display: block; }
+      .navbar-logo {
+        margin-right: 88px; }
       .navbar--footer {
         padding-left: 15px;
         padding-right: 15px; }
@@ -7830,7 +7846,9 @@ a:hover {
   .navbar-expand-md > .container,
   .navbar-expand-md > .container-fluid {
     padding-right: 0;
-    padding-left: 0; } }
+    padding-left: 0; }
+      .block-promo--about {
+        background-image: none; } }
 @media (max-width: 991px) {
       .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
         color: white !important; } }
@@ -7846,13 +7864,23 @@ a:hover {
   .navbar-expand-xl > .container-fluid {
     padding-right: 0;
     padding-left: 0; }
-        .navbar--footer .navbar-side {
-          display: none !important; }
-      .header--index {
-        height: 100vh;
+        .navbar-nav li {
+          margin-right: 15px; }
+      .navbar-contact {
+        margin-right: 20px; }
+      .navbar--footer .container {
         -webkit-box-align: baseline;
             -ms-flex-align: baseline;
                 align-items: baseline; }
+        .navbar--footer .navbar-logo {
+          margin-right: 10px; }
+      .navbar--footer .navbar-contact {
+        margin-bottom: 20px; }
+        .navbar--footer .navbar-side {
+          display: block !important; }
+    .btn {
+      padding-left: 10px;
+      padding-right: 10px; }
     .stylepage__top {
       display: block !important; }
     .stylepage__nav {
@@ -8007,7 +8035,9 @@ a:hover {
   .navbar-expand-sm > .container,
   .navbar-expand-sm > .container-fluid {
     padding-right: 0;
-    padding-left: 0; } }
+    padding-left: 0; }
+      .navbar-contact {
+        display: block; } }
 @media (max-width: 991.98px) {
   .table-responsive-lg {
     display: block;
@@ -8022,36 +8052,49 @@ a:hover {
     padding-left: 0; }
       .navbar-collapse {
         background-color: #24668c;
-        margin-top: 20px; }
+        margin-top: 36px; }
       .navbar-nav {
         padding: 0px 20px;
         margin-top: 10px; }
+        .navbar-nav li {
+          margin-bottom: 10px; }
+      .navbar-adress {
+        color: white; }
       .navbar-side {
         padding: 10px 20px 20px 20px;
         display: block !important; }
       .navbar-contact {
-        display: block !important;
         width: 100%;
         margin-bottom: 20px; }
         .navbar-contact .head-h4 a {
           color: white; }
           .navbar-contact .head-h4 a:hover, .navbar-contact .head-h4 a:focus {
             color: white; }
+        .navbar-contact--mobile {
+          width: auto;
+          position: absolute;
+          top: 40px;
+          right: 80px;
+          margin: 0; }
         .navbar--footer .navbar-logo {
           margin-bottom: 20px;
           margin-top: 0; }
         .navbar--footer .navbar-collapse {
           padding-top: 20px; }
+      .navbar--footer .navbar-contact {
+        display: block; }
         .navbar--footer .navbar-nav li {
           margin-bottom: 5px; }
-        .navbar--footer .navbar-side {
-          display: block !important; }
         .navbar--footer .nav-link {
           padding: 0; }
       .page-footer__bottom .d-flex, .page-footer__bottom .navbar-side {
         display: block !important; }
       .page-footer__bottom p:last-child {
         margin-bottom: 0; }
+      .header--index {
+        -webkit-box-align: baseline;
+            -ms-flex-align: baseline;
+                align-items: baseline; }
     .inner-block img {
       margin-bottom: 20px; } }
 

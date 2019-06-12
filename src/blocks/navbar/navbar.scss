@@ -20,7 +20,7 @@
 
     @include media-breakpoint-down(md) {
       background-color: $color-primary;
-      margin-top: 20px;
+      margin-top: 36px;
     }
   }
 
@@ -35,6 +35,13 @@
 
     li {
       margin-right: 29px;
+
+      @include media-breakpoint-down(lg) {
+        margin-right: 15px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 10px;
+      }
 
       &:last-child {
         margin-right: 0;
@@ -132,8 +139,11 @@
     margin-top: 14px;
     white-space: nowrap;
 
-    @media(min-width: $screen-lg) {
+    @include media-breakpoint-up(xl) {
       margin-right: 88px;
+    }
+    @media(min-width: $screen-lg) {
+      margin-right: 30px;
     }
     @media(min-width: $screen-md) {
       margin-right: 20px;
@@ -149,6 +159,10 @@
     font-size: 13px;
     letter-spacing: 0.8px;
 
+    @include media-breakpoint-down(md) {
+      color: white;
+    }
+
     &:hover, &:focus {
       color: $color-danger;
       text-decoration: underline;
@@ -161,6 +175,7 @@
         color: $color-danger;
       }
     }
+    
   }
 
   &-side {
@@ -187,13 +202,18 @@
     white-space: nowrap;
     display: none;
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       display: block;
     }
+    @include media-breakpoint-down(lg) {
+      margin-right: 20px;
+    }
     @include media-breakpoint-down(md) {
-      display: block !important;
       width: 100%;
       margin-bottom: 20px;
+    }
+    @include media-breakpoint-down(xs) {
+      display: block;
     }
 
     .head-h4 {
@@ -211,6 +231,30 @@
           @include media-breakpoint-down(md) {
             color: white;
           }
+        }
+      }
+    }
+
+    &--mobile {
+      display: none !important;
+
+      @include media-breakpoint-up(sm) {
+        display: block !important;
+      }
+      @include media-breakpoint-up(lg) {
+        display: none !important;
+      }
+      @include media-breakpoint-down(md) {
+        width: auto;
+        position: absolute;
+        top: 40px;
+        right: 80px;
+        margin: 0;
+      }
+
+      .head-h4 {
+        a {
+          color: black !important;
         }
       }
     }
@@ -243,6 +287,12 @@
       padding-right: 15px;
     }
 
+    .container {
+      @include media-breakpoint-down(lg) {
+        align-items: baseline;
+      }
+    }
+
     #{$block-name} {
       &-logo {
         margin-top: 12px;
@@ -251,6 +301,9 @@
         @include media-breakpoint-down(md) {
           margin-bottom: 20px;
           margin-top: 0;
+        }
+        @include media-breakpoint-down(lg) {
+          margin-right: 10px;
         }
       }
       &-collapse {
@@ -269,6 +322,13 @@
         }
       }
       &-contact {
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 20px;
+        }
+        @include media-breakpoint-down(md) {
+          display: block;
+        }
+
         .head-h4 {
           a {
             color: white;
@@ -296,9 +356,6 @@
         padding-top: 0px;
 
         @include media-breakpoint-down(lg) {
-          display: none !important;
-        }
-        @include media-breakpoint-down(md) {
           display: block !important;
         }
       }

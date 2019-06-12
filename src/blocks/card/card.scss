@@ -156,7 +156,7 @@
     
     #{$block-name} {
       &-img {
-        padding-top: 75px;
+        padding-top: 75%;
 
         @include media-breakpoint-up(md) {
           height: 368px;

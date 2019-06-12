@@ -12,13 +12,16 @@
   }
 
   &--about {
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom left 10px;
+    background-position: bottom;
     margin-bottom: 50px;
 
     @include media-breakpoint-up(xl) {
       margin-bottom: 71px;
+    }
+    @include media-breakpoint-down(sm) {
+      background-image: none;
     }
   }
 }

@@ -12,7 +12,7 @@
   align-items: center;
   background-image: url(../img/header-background.jpg);
   background-size: cover;
-  background-position: top center;
+  background-position: top right;
 
   @media(min-width: $screen-lg){
     display: flex;
@@ -21,12 +21,18 @@
   }
 
   &--index {
-    height: 100vh;
+    background-position: left bottom;
     margin-bottom: 52px;
 
-    @include media-breakpoint-down(lg) {
-      height: 100vh;
+    @include media-breakpoint-down(md) {
       align-items: baseline;
+    }
+
+    @media(min-width: $screen-md){
+      background-position: bottom center;
+    }
+    @media(min-width: $screen-lg){
+      background-position: right bottom;
     }
   }
 }

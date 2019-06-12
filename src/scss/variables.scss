@@ -126,13 +126,9 @@ $container-xxl:               $screen-xxl - 30;
 
 $breadcrumb-divider: quote(">");
 
-// .container {
-//   max-width: 1200px;
-
-//   @media(max-width: $screen-lg){
-    
-//   }
-// }
+.container {
+  max-width: 1200px !important;
+}
 
 
 // Модульная сетка

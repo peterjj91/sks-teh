@@ -20,8 +20,9 @@ $border-radius:               3px !default;
   font-weight: bold;
   text-transform: uppercase;
 
-  @media(min-width: $screen-lg){
-    
+  @include media-breakpoint-down(lg) {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   &-primary {
