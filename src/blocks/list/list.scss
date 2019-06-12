@@ -5,6 +5,11 @@
 .list {
 
   $block-name: &; // #{$block-name}__element {}
+  font-size: 14px;
+
+  li {
+    margin-bottom: 14px;
+  }
 
   &--bullet {
     padding-left: 0;

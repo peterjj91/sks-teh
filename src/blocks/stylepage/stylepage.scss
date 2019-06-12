@@ -1,0 +1,84 @@
+// В этом файле должны быть стили для БЭМ-блока stylepage, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.stylepage {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  &__top {
+    margin-top: 26px;
+    margin-bottom: 67px;
+
+    @include media-breakpoint-down(lg) {
+      display: block !important;
+    }
+  }
+
+  &__nav {
+    text-align: right;
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+      text-align: left;
+    }
+
+    .nav {
+      margin-bottom: 23px;
+
+      @media(min-width: $screen-lg) {
+        justify-content: end;
+      }
+    }
+  }
+
+  &__link {
+    @media(min-width: $screen-lg) {
+      
+    }
+
+    .navbar-adress {
+      margin-right: 35px;
+      // display: inline-block;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 14px;
+    // margin-bottom: 63px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 68px;
+
+    @include media-breakpoint-down(lg) {
+      
+    }
+
+    .head-h6 {
+      margin-bottom: 22px;
+    }
+
+    &__block {
+      min-width: 251px;
+    }
+  }
+
+  &__bottom {
+    margin-bottom: 30px;
+    
+    .table {
+      margin-top: 11px;
+    }
+  }
+}

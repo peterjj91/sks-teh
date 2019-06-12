@@ -21,6 +21,7 @@
   }
 
   &--index {
+    height: 100vh;
     margin-bottom: 52px;
 
     @include media-breakpoint-down(lg) {

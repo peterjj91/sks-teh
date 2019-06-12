@@ -5,6 +5,7 @@
 .page-footer {
   $block-name: &;
   background-image: url(../img/footer-background.png);
+  background-size: cover;
   color: white;
 
   @media(min-width: $screen-lg) {
@@ -41,19 +42,19 @@
     padding: 16px 0px 16px 0px;
     font-size: 11px;
     
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       padding-bottom: 0;
     }
 
     .d-flex {
-      @include media-breakpoint-down(xl) {
+      @include media-breakpoint-down(md) {
         display: block !important;
       }
     }
 
     p {
       &:last-child {
-        @include media-breakpoint-down(xl) {
+        @include media-breakpoint-down(md) {
           margin-bottom: 0;
         }
       }

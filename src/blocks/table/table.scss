@@ -10,14 +10,7 @@
 
   th, td {
     border-color: $color-main--accent;
-
-    // &:first-child {
-    //   border: 1px solid $color-main--accent;
-    // }
-
-    // &:last-child {
-    //   border-right: 1px solid $color-main--accent;
-    // }
+    padding: 0px 21px;
   }
 
   .thead-light {
@@ -29,5 +22,17 @@
 
   thead {
     font-size: 14px;
+
+    th, td {
+      padding-top: 13px;
+      padding-bottom: 13px;
+    }
+  }
+
+  tbody {
+    th, td {
+      padding-top: 12px;
+      padding-bottom: 8px;
+    }
   }
 }

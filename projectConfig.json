@@ -23,7 +23,9 @@
     "slider": [],
     "modal": [],
     "form": [],
-    "contact": []
+    "contact": [],
+    "stylepage": [],
+    "fancybox": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

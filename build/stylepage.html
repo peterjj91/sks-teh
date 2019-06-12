@@ -51,7 +51,7 @@
                     <div class="head-h4"><a href="tel:+74956658074">+7 (495)665-80-74</a></div>
                     <a href="mailto:sks-teh@bk.ru" class="navbar-adress">sks-teh@bk.ru</a>
                   </div>
-                  <button class="btn btn-danger my-2 my-sm-0" type="submit">
+                  <button class="btn btn-danger my-2 my-sm-0" data-toggle="modal" data-target="#signUp">
                     Обратная связь
                   </button>
                 </div>
@@ -63,80 +63,103 @@
       
       <main class="page__main-content" role="main">
         <div class="container">
-          <h1>Заголовок</h1>
-          <div class="head-h2">Заголовок</div>
-          <div class="head-h3">Заголовок</div>
-
-          <div class="justify-content-end text-right">
-            <ul class="nav justify-content-end">
-              <li class="nav-item">
-                <a class="nav-link" href="#">О компании</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Виды деятельности</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Наши объекты</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Контакты</a>
-              </li>
-            </ul>
-            <ul class="nav justify-content-end">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">О компании</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Виды деятельности</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Наши объекты</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Контакты</a>
-              </li>
-            </ul>
-
-            <a href="#" class="navbar-adress">sks-teh@bk.ru</a>
-          </div>
-
-          <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary">Подробнее</button>
-            <button type="button" class="btn btn-danger">Подробнее</button>
-          </div>
-          <br><br>
-          <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-outline-primary">Подробнее</button>
-            <button type="button" class="btn btn-outline-danger">Подробнее</button>
-          </div>
-
-          <br>
-
-          <div class="d-flex">
-            <ul class="list--bullet">
-              <li>Заголовок списка</li>
-              <li>Заголовок списка</li>
-              <li>Заголовок списка</li>
-              <li>Заголовок списка</li>
-            </ul>
-            <ol class="list--counter">
-              <li>Заголовок списка</li>
-              <li>Заголовок списка</li>
-              <li>Заголовок списка</li>
-              <li>Заголовок списка</li>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Главная</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Контакты</li>
             </ol>
+          </nav>
+
+          <div class="head-h3 head--highlight">StylePage</div>
+
+          <div class="d-flex justify-content-between stylepage__top">
+            <div class="stylepage__title">
+              <h1 style="margin-bottom: 19px;">Заголовок</h1>
+              <div style="margin-bottom: 14px;" class="head-h2">Заголовок</div>
+              <div class="head-h3">Заголовок</div>
+            </div>
+            <div class="stylepage__nav">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">О компании</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Виды деятельности</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Наши объекты</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Контакты</a>
+                </li>
+              </ul>
+              <ul class="nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">О компании</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Виды деятельности</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Наши объекты</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Контакты</a>
+                </li>
+              </ul>
+  
+              <div class="stylepage__link">
+                <a href="#" class="navbar-adress active">sks-teh@bk.ru</a>
+
+                <a href="#" class="navbar-adress">sks-teh@bk.ru</a>
+              </div>
+            </div>
           </div>
 
-          <div class="row">
-            <div class="col-3">
-              <div class="card">
+          <div class="stylepage__list">
+            <div class="stylepage__list__block">
+                <div class="head-h6">СПИСОК НЕНУМЕРОВАННЫЙ</div>
+              <ul class="list list--bullet">
+                <li>Заголовок списка</li>
+                <li>Заголовок списка</li>
+                <li>Заголовок списка</li>
+                <li>Заголовок списка</li>
+              </ul>
+            </div>
+            <div class="stylepage__list__block">
+              <div class="head-h6">СПИСОК НУМЕРОВАННЫЙ</div>
+              <ol class="list list--counter">
+                <li>Заголовок списка</li>
+                <li>Заголовок списка</li>
+                <li>Заголовок списка</li>
+                <li>Заголовок списка</li>
+              </ol>
+            </div>
+            <div class="stylepage__list__block">
+              <div class="head-h6">КНОПКИ</div>
+
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary">Подробнее</button>
+                <button type="button" class="btn btn-danger">Подробнее</button>
+              </div>
+              
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-primary">Подробнее</button>
+                <button type="button" class="btn btn-outline-danger">Подробнее</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row stylepage__bottom">
+            <div class="col-lg-3 col-md-6">
+              <div class="card card--main">
                 <div class="card-img" style="background-image: url(../img/card-img-1.jpg);"></div>
                 <div class="card-body">
-                  <h5 class="card-title">Гидроизоляция подземных сооружений</h5>
+                  <a href="#" class="card-title">Гидроизоляция подземных сооружений</a>
                 </div>
               </div>
             </div>
-            <!-- <div class="col-3">
+            <div class="col-lg-3 col-md-6">
               <div class="card card--background text-white">
                 <div class="card-img" style="background-image: url(../img/card-img-1.jpg);"></div>
                 <div class="card-body">
@@ -144,39 +167,38 @@
                   <a href="#" class="card-link">Подробнее</a>
                 </div>
               </div>
-            </div> -->
+            </div>
+            <div class="col-lg-6">
+              <div class="head-h6">Таблица</div>
+              
+              <table class="table">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Наименование</th>
+                    <th scope="col">Цена</th>
+                    <th scope="col">Итого</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Заголовок в таблице нормальной такой длинны </td>
+                    <td>20 250 р.</td>
+                    <td>24 250 р.</td>
+                  </tr>
+                  <tr>
+                    <td>Заголовок в таблице нормальной такой длинны </td>
+                    <td>20 250 р.</td>
+                    <td>24 250 р.</td>
+                  </tr>
+                  <tr>
+                    <td>Заголовок в таблице нормальной такой длинны </td>
+                    <td>20 250 р.</td>
+                    <td>24 250 р.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-
-          <table class="table">
-            <thead class="thead-light">
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </main>
     </div>
@@ -194,7 +216,7 @@
                 </div>
       
                 <div class="navbar-collapse align-items-start">
-                  <ul class="navbar-nav mr-auto">
+                  <ul class="navbar-nav navbar-nav--white mr-auto">
                     <li class="nav-item active">
                       <a class="nav-link" href="#">О компании</a>
                     </li>
@@ -240,7 +262,8 @@
     </div>
   </div>
 <script src="js/script.min.js"></script>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">

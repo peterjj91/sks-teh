@@ -11,10 +11,13 @@
 
   @include media-breakpoint-down(xl) {
     align-items: baseline;
-    padding-top: 35px;
+    padding-top: 29px;
   }
 
   &-collapse {
+    margin-top: 9px;
+    z-index: 2;
+
     @include media-breakpoint-down(md) {
       background-color: $color-primary;
       margin-top: 20px;
@@ -22,6 +25,7 @@
   }
 
   &-nav {
+    align-items: start;
     margin-top: 2px;
 
     @include media-breakpoint-down(md) {
@@ -30,7 +34,7 @@
     }
 
     li {
-      margin-right: 13px;
+      margin-right: 29px;
 
       &:last-child {
         margin-right: 0;
@@ -52,10 +56,26 @@
         }
       }
     }
-  }
 
-  &-collapse {
-    z-index: 2;
+    &--white {
+      li {
+
+      }
+      .nav {
+        &-item {
+          .nav-link {
+            color: white;
+          }
+
+          &.active {
+            .nav-link {
+              color: white;
+              border: none;
+            }
+          }
+        }
+      }
+    }
   }
 
   &-light {
@@ -109,11 +129,11 @@
   &-logo {
     font-size: 12px;
     line-height: normal;
-    margin-top: 6px;
+    margin-top: 14px;
     white-space: nowrap;
 
     @media(min-width: $screen-lg) {
-      margin-right: 81px;
+      margin-right: 88px;
     }
     @media(min-width: $screen-md) {
       margin-right: 20px;
@@ -127,10 +147,19 @@
 
   &-adress {
     font-size: 13px;
+    letter-spacing: 0.8px;
 
     &:hover, &:focus {
       color: $color-danger;
       text-decoration: underline;
+    }
+
+    &.active {
+      color: $color-danger;
+
+      &:hover, &:focus {
+        color: $color-danger;
+      }
     }
   }
 
@@ -198,6 +227,7 @@
 
     p {
       margin: 0;
+      font-size: 14px;
     }
   }
 
@@ -216,7 +246,20 @@
     #{$block-name} {
       &-logo {
         margin-top: 12px;
-        margin-right: 43px;
+        margin-right: 51px;
+
+        @include media-breakpoint-down(md) {
+          margin-bottom: 20px;
+          margin-top: 0;
+        }
+      }
+      &-collapse {
+        padding-top: 6px;
+        margin-top: 0;
+
+        @include media-breakpoint-down(md) {
+          padding-top: 20px;
+        }
       }
       &-brand {
         color: white;
@@ -234,16 +277,26 @@
       }
       &-nav {
         margin-top: 0;
+
+        li {
+          @include media-breakpoint-down(md) {
+            margin-bottom: 5px;
+          }
+
+          &:last-child {
+
+          }
+        }
       }
       &-adress {
         color: white;
       }
       &-side {
-        padding-top: 7px;
-        display: none !important;
+        // padding-top: 7px;
+        padding-top: 0px;
 
-        @include media-breakpoint-up(xl) {
-          display: block;
+        @include media-breakpoint-down(lg) {
+          display: none !important;
         }
         @include media-breakpoint-down(md) {
           display: block !important;
@@ -253,8 +306,38 @@
 
     .nav-link {
       color: white;
+      @include media-breakpoint-down(md) {
+        padding: 0;
+      }
+
       &:hover, &:focus {
         color: white;
+      }
+    }
+  }
+}
+
+.nav {
+  &-item {
+    margin-right: 25px;
+
+    &:last-child {
+      margin-right: 13px;
+    }
+    
+    .nav-link {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 13px;
+      padding: 0px 0px !important;
+      color: black;
+      letter-spacing: 1px;
+    }
+
+    &.active {
+      .nav-link {
+        color: $color-primary;
+        border-bottom: 1px solid $color-danger;
       }
     }
   }
